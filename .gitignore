@@ -1,0 +1,20 @@
+react-interview/node_modules
+react-interview/.pnp
+react-interview/.pnp.js
+
+# testing
+react-interview/coverage
+
+# production
+react-interview/build
+
+# misc
+react-interview/.DS_Store
+react-interview/.env.local
+react-interview/.env.development.local
+react-interview/.env.test.local
+react-interview/.env.production.local
+
+react-interview/npm-debug.log*
+react-interview/yarn-debug.log*
+react-interview/yarn-error.log*

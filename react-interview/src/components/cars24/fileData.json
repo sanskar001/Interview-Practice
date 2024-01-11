@@ -1,0 +1,22 @@
+{
+  "root": [
+    {
+      "public": ["index.html", "logo.png", "manifest.json", "favicon.ico"]
+    },
+    {
+      "src": [
+        "App.js",
+        "index.css",
+        "index.js",
+        {
+          "components": [
+            { "cars24": ["index.js", "fileData.json"] },
+            { "UI": ["Button.js", "Input.js"] }
+          ]
+        }
+      ]
+    },
+    "package.json",
+    "README.md"
+  ]
+}

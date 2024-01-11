@@ -1,0 +1,16 @@
+.file_explorer {
+  padding: 4px 16px;
+}
+
+.folder {
+  padding: 4px 16px;
+}
+
+.folder_name {
+  color: blue;
+  text-decoration: underline;
+}
+
+.files {
+  padding: 4px 32px;
+}
