@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: lightblue;
+  border: 1px solid black;
+}
+
+.card {
+  padding: 20px;
+  background-color: lightcoral;
+}
+
+.btn {
+  padding: 8px 16px;
+}
