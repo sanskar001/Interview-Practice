@@ -48,4 +48,4 @@ function getTokenValid(requests, tokens) {
   return result;
 }
 
-console.log(getTokenValid(requests, tokens));
+// console.log(getTokenValid(requests, tokens));

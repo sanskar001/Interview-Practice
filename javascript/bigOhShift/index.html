@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .preview {
+        border: 1px solid lightblue;
+        padding: 20px;
+        margin-top: 40px;
+      }
+
+      button[type="reset"] {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Write any query which may include color name:</h3>
+    <div>
+      <input type="text" name="query" id="query" />
+      <button type="submit" disabled>Submit</button>
+    </div>
+
+    <div class="preview"></div>
+    <button type="reset">Reset</button>
+
+    <script type="module">
+      import { CSS_COLOR_NAMES } from "./colors.js";
+
+      const queryElement = document.querySelector("#query");
+      const submitBtn = document.querySelector("button[type='submit']");
+      const resetBtn = document.querySelector("button[type='reset']");
+      const preview = document.querySelector(".preview");
+
+      queryElement.addEventListener("input", function (e) {
+        submitBtn.disabled = !e.target.value;
+      });
+
+      submitBtn.addEventListener("click", function () {
+        preview.textContent = queryElement.value;
+        preview.style.backgroundColor = getColor(queryElement.value) || "white";
+        console.log(getColor(queryElement.value));
+      });
+
+      resetBtn.addEventListener("click", function () {
+        preview.textContent = "";
+        preview.style.backgroundColor = "inherit";
+      });
+
+      const colorList = Object.keys(CSS_COLOR_NAMES).map((color) =>
+        color.toLowerCase()
+      );
+
+      function getColor(query) {
+        const wordList = query.split(" ");
+        return wordList.find((word) => colorList.includes(word));
+      }
+    </script>
+  </body>
+</html>
