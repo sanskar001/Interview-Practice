@@ -6,7 +6,8 @@ const promiseAll = (promises) => {
 
   return new Promise((resolve, reject) => {
     promises.forEach((promise, index) => {
-      Promise.resolve(promise)
+      // Promise.resolve(promise)
+      promise
         .then((res) => {
           result[index] = res;
           indexCount++;
